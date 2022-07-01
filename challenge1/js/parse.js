@@ -53,13 +53,12 @@ const json   = {};      // En esta variable se guarda el objeto final
                k++
              }
              
-         json[subString.replace(/['"]+/g, "").replace(/,/g, "").trim()] =  newArray
-         leftover= leftover.substring(leftover.indexOf("]")+1,leftover.length)
+              json[subString.replace(/['"]+/g, "").replace(/,/g, "").trim()] =  newArray
+              leftover= leftover.substring(leftover.indexOf("]")+1,leftover.length)
 
-         } else {
-           leftover = leftover.substring(separator2, leftover.length);
-           json[subString.replace(/['"]+/g, "").replace(/,/g, "").trim()] =  subString2.slice(1).replace(/['"]+/g, "").trim();
-
+            } else {
+              leftover = leftover.substring(separator2, leftover.length);
+              json[subString.replace(/['"]+/g, "").replace(/,/g, "").trim()] =  subString2.slice(1).replace(/['"]+/g, "").trim();
          }
  
        } else {
@@ -107,7 +106,6 @@ function correctTypeof() {
         }
       }
     }
-
   } 
 }
 correctTypeof()
