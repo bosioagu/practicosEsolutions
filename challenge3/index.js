@@ -1,7 +1,7 @@
-const http = require ("http");                               // Es un modulo que viene integrado en node
+const http  = require ("http");                               
 
-const host = "localhost";
-const port = 8000;
+const host  = "localhost";
+const port  = 8000;
 
 class Usuario {
     constructor(id, firstName, lastName, age, country) {
@@ -19,14 +19,11 @@ const usuarios = [
     new Usuario(3, "Pedro", "Garcia", 33, "España"),
     new Usuario(4, "Luis", "Alaniz", 33, "Colombia"),
     new Usuario(5, "Peter", "Smith", 33, "EEUU"),
-
 ];
 
 const jsonUsers = JSON.stringify(usuarios)
 
-
-
-const requestListener = function(req, res) {                 //funcion que escucha las solicitudes
+const requestListener = function(req, res) {                
     res.setHeader("Content-Type", "application/json");
     switch (req.url) {
         case "/usuarios":
@@ -39,7 +36,7 @@ const requestListener = function(req, res) {                 //funcion que escuc
     }
 }
 
-const server = http.createServer(requestListener);          // cuando el servidor sea llamado usa la funcion requestListener
+const server = http.createServer(requestListener);          
 server.listen(port, host, () => {
     console.log(`El servidor se esta ejecutando en http://${host}:${port}`)
 });
