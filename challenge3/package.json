@@ -1,0 +1,16 @@
+{
+  "name": "users",
+  "version": "1.0.0",
+  "description": "Show users with id, first name, last name, age and country",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "users",
+    "name",
+    "lastname"
+  ],
+  "author": "\"Agustin Bosio \\ <bosio.agustinariel@gmail.com\\>",
+  "license": "ISC"
+}
