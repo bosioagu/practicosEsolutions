@@ -1,10 +1,29 @@
 const express   = require("express");
-const User = require("../models/userModel");  
-const Company = require("../models/companyModel");   
+const User      = require("../models/userModel");  
+const Company   = require("../models/companyModel");   
 
 const router    = express.Router();
 
+router.post('/users/:_id', async (req, res) => {
+    
+    const newUser = new User(req.body);
+    const company = await Company.findById(req.params);
+    try{
+        newUser.Company = company;
+        await newUser.save();
+        company.companyUsers.push(newUser);
+        await company.save()
+       const data = newUser
+        res.status(200).json(data);
+        ;
+    } catch (error) { 
+        res.status(500).json({message: error.message});
+    }
+    
+})
 
+
+/*
 router.post('/users/:_id', async (req, res) => {
     const newUser = new User(req.body);
     const company = await Company.findById(req.params);
@@ -14,7 +33,7 @@ router.post('/users/:_id', async (req, res) => {
     await company.save();
     res.send(newUser);
 })
-
+*/
 router.post("/users", async (req, res) => {
     
     const data = new User({
