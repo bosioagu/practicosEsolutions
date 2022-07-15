@@ -1,3 +1,10 @@
+/**
+ * Autor: Bosio Agustin
+ * Version: 0.1.0
+ * email: bosio.agustinariel@gmail.com
+ * El codigo realiza ABM de Usuarios y Empresas. Además relaciona las mismas.
+ */
+
 require("dotenv").config();                             
 
 const cors = require("cors");

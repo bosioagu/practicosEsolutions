@@ -6,15 +6,14 @@ const router    = express.Router();
 
 
 router.post('/users/:_id', async (req, res) => {
-    const newUser = new User(req.body)
+    const newUser = new User(req.body);
     const company = await Company.findById(req.params);
     newUser.Company = company;
-    await newUser.save()
-    company.companyUsers.push(newUser)
+    await newUser.save();
+    company.companyUsers.push(newUser);
     await company.save();
-    res.send(newUser)
+    res.send(newUser);
 })
-
 
 router.post("/users", async (req, res) => {
     
@@ -25,9 +24,9 @@ router.post("/users", async (req, res) => {
     });
     try {
         const dataToSave = await data.save();
-        res.status(200).json(dataToSave)
+        res.status(200).json(dataToSave);
     } catch (error) { 
-        res.status(500).json({message: error.message})
+        res.status(500).json({message: error.message});
     }
 });
 
@@ -40,20 +39,23 @@ router.get("/users", async (req, res) => {
     }
 })
 
-
 router.get("/:_id/companies", async (req, res) => {
-    const company = await Company.findById(req.params).populate("companyUsers", "name")
-    res.send(company)
+    try {
+        const company = await Company.findById(req.params).populate("companyUsers", "name");
+        res.status(200).json(company);
+    } catch (error) {
+         res.status(500).json({message: error.message}); 
+    }
 })
 
 
 router.get("/users/:id", async (req, res) => {
     try {
-        const data = await User.findById(req.params.id);
-        res.status(200).json(data)
+        const data = await User.findById(req.params.id).populate("Company", "name");;
+        res.status(200).json(data);
             
     } catch (error) {
-        res.status(500).json({message: error.message}) 
+        res.status(500).json({message: error.message});
     }
 })
 
@@ -73,10 +75,10 @@ router.put("/users/:id", async (req, res) => {
 router.delete("/users/:id", async (req, res) => {
     try {
         const id = req.params.id;
-        const data = await User.findByIdAndDelete(id)
-        res.status(200).json(data)
+        const data = await User.findByIdAndDelete(id);
+        res.status(200).json(data);
     } catch (error) {
-        res.status(500).json({message: error.message}) 
+        res.status(500).json({message: error.message});
     }
 });
 

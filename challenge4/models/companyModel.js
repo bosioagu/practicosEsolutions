@@ -1,14 +1,18 @@
+// El modelo de la Empresa , incluye el name de la empresa y ademas se le agregó que devuelva los empleados de la misma.
+
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const companySchema = new Schema({     
  name:{
-    type: String,
-    unique: true 
+   required: true,
+   type: String,
+   unique: true 
   },
  companyUsers:[{
-    type: Schema.Types.ObjectId,
-    ref: "User"
+   required: true,
+   type: Schema.Types.ObjectId,
+   ref: "User"
  }]
 });
 

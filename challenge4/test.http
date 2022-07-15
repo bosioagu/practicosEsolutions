@@ -1,12 +1,12 @@
 GET http://localhost:3000/api/users
 ###
-GET http://localhost:3000/api/users/id_usuario
+GET http://localhost:3000/api/users/id_user
 ###
 POST http://localhost:3000/api/users/ HTTP/1.1
 Content-Type: application/json
 
 {
-    "name": "",
+    "name": "   ",
     "username" : "",
     "email" : ""
 }
@@ -41,6 +41,9 @@ GET http://localhost:3000/api/companies
 ###
 
 GET http://localhost:3000/api/companies/id_company
+###
+
+GET http://localhost:3000/api/id_company/companies
 ###
 
 POST http://localhost:3000/api/companies/ HTTP/1.1
