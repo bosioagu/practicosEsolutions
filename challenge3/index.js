@@ -1,3 +1,11 @@
+/**
+ * Autor: Bosio Agustin
+ * Version: 0.0.1
+ * email: bosio.agustinariel@gmail.com
+ * El codigo responde con un Objeto JSON de los usuarios, solicitando la url "http://hostname:port/usuarios".
+ * En caso de error, devuelve el codigo de error con status Code y mensaje
+ */
+
 const http  = require ("http");                               
 
 const host  = "localhost";
