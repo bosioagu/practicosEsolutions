@@ -22,18 +22,6 @@ router.post('/users/:_id', async (req, res) => {
     
 })
 
-
-/*
-router.post('/users/:_id', async (req, res) => {
-    const newUser = new User(req.body);
-    const company = await Company.findById(req.params);
-    newUser.Company = company;
-    await newUser.save();
-    company.companyUsers.push(newUser);
-    await company.save();
-    res.send(newUser);
-})
-*/
 router.post("/users", async (req, res) => {
     
     const data = new User({
