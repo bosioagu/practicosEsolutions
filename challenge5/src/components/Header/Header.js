@@ -9,12 +9,12 @@ const useStyles = createUseStyles({
         display: "flex",
         flexWrap: "wrap",
         borderBottom: "black solid 1px",
-        padding: [30, 50],
-        justifyContent: "space-between"
-        
+        padding: [25, 50],
+        justifyContent: "space-between",
+        alignItems: "center",        
     },
     logo: {
-       height: 30
+       height: 80
     },
 
     message: {
@@ -28,8 +28,8 @@ export default function Header() {
     
     return(
         <div className={classes.wrapper}>
-            <div className={classes.logo}>
-                <img src={logo} alt={logo}/>
+            <div>
+                <img className={classes.logo} src={logo} alt={logo}/>
             </div>
             <div className={classes.message}>
                 Bienvenido {user.name}

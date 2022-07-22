@@ -30,7 +30,7 @@ export default function TripSummary() {
     const { trips } = useContext(TripContext)
     return(
         <div className={classes.wrapper}>
-            <h3>Carrito: </h3>
+            <h2>Carrito: </h2>
             
             <ul className= {classes.list}>
                 {trips.map((name, i) => (

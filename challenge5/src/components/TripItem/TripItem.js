@@ -58,5 +58,5 @@ TripItem.propTypes = {
     image: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
-    price: PropTypes.string,
+    price: PropTypes.number,
 }

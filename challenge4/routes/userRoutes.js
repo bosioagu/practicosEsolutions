@@ -27,7 +27,7 @@ router.post("/users", async (req, res) => {
     const data = new User({
         name: req.body.name,
         username: req.body.username,
-        email: req.body.email ,
+        email: req.body.email 
     });
     try {
         const dataToSave = await data.save();

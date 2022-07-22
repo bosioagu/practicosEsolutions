@@ -4,11 +4,12 @@ import TripSummary from "../tripSummary/TripSummary";
 import TripButton from "../tripButton.js/TripButton";
 import { createUseStyles } from 'react-jss';
 
+
 const useStyles = createUseStyles({
 
     cancelButton: {
         marginTop: 20,
-        marginRight: 250,
+        marginRight: "25%",
         display: "flex",
         justifyContent: "flex-end",
     },
@@ -26,7 +27,7 @@ export default function TripMaker() {
 
     return(
         <TripContext.Provider value={{trips, setTrips}}> 
-            <div className={classes.cancelButton}>
+             <div className={classes.cancelButton}>
                 <TripButton  type= "CANCELAR"/>
             </div>
             <TripBuilder/>

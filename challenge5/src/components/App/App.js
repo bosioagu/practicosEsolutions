@@ -1,3 +1,17 @@
+/**
+ * Autor: Bosio Agustin
+ * Version: 0.1.0
+ * email: bosio.agustinariel@gmail.com
+ * El codigo muestra diversas respuestas segun las acciones realizadas.
+ * El arbol de componentes es el siguiente:
+ * App -->Header -->TripMaker
+ *                      -->TripBuilder -->TripItem -->TripButton
+ *                      -->TripSummary 
+ *            
+ *                  
+ */
+
+
 import React from 'react';
 import Header from '../Header/Header';
 import TripMaker from '../TripMaker/TripMaker';

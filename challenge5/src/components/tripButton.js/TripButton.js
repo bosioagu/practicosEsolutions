@@ -47,8 +47,8 @@ export default function TripButton({ type, name, email}) {
                 } else if (trips.includes ("Buzios",-1)){
                     return alert((`Send to ${user.email} \n ${user.name} Cancelaste tu reserva a ${name}`))
                 } else if (trips.includes ("Iguazú",-1)){
-                    trips.splice(-1,1)
-                    return setTrips(trips.splice(-1,1), alert(`Send to ${user.email} \n ${user.name} Cancelaste tu ultima Compra`))
+                    trips.pop(0)
+                    return setTrips(trips.pop(), alert(`Send to ${user.email} \n ${user.name} Cancelaste tu ultima Compra`))
                 } else 
                     return alert("No puedes seguir eliminando")
             default:

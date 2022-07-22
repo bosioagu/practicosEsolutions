@@ -6,9 +6,10 @@ POST http://localhost:3000/api/users/ HTTP/1.1
 Content-Type: application/json
 
 {
-    "name": "   ",
-    "username" : "",
-    "email" : ""
+    "name": " Agustdin     ",
+    "username" : "agdubosio  ",
+    "email" : "agdu@g",
+ 
 }
 
 ###
