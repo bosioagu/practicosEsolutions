@@ -1,7 +1,7 @@
 import React, {useReducer, createContext} from "react";
 import TripBuilder from "../TripBuilder/TripBuilder";
 import TripSummary from "../tripSummary/TripSummary";
-import TripButton from "../tripButton.js/TripButton";
+import TripButton from "../tripButton/TripButton";
 import { createUseStyles } from 'react-jss';
 
 

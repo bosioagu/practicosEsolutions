@@ -1,7 +1,7 @@
 import React from "react";
 import TripItem from "../TripItem/TripItem";
 import { createUseStyles } from 'react-jss';
-import TripButton from "../tripButton.js/TripButton";
+import TripButton from "../tripButton/TripButton";
 
 
 const useStyles = createUseStyles({

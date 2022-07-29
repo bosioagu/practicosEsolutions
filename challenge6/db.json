@@ -1,0 +1,34 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Mi primera Historia",
+      "content": "Esta es la primera historia..."
+    },
+    {
+      "title": "Mi segunda Histora",
+      "content": "Había una vez...",
+      "id": 2
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Homero Simpson",
+      "email": "hsimpson@email.com",
+      "password": "123"
+    },
+    {
+      "name": "Lisa Simpson",
+      "email": "lsimpson@gmail.com",
+      "password": "123",
+      "id": 2
+    },
+    {
+      "name": "Bart Simpson",
+      "email": "bsimpson@gmail.com",
+      "password": "123",
+      "id": 3
+    }
+  ]
+}
