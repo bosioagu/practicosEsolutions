@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { getPosts, setPost } from '../services/PostService';
+
 import '../styles/AllPost.css'
 import CreatePost from './CreatePost';
 import Post from './Post'
@@ -29,7 +30,6 @@ export default function AllPost() {
     const onCreate = () => {
         setIsCreated(!isCreated)
         getPosts().then((data) => setAllPost(data))
-        console.log(allPost)
     }
 
     const onShow = () => {
@@ -38,7 +38,7 @@ export default function AllPost() {
 
     if(isCreated) {
         return(
-            <div className='container text-center '>
+            <div className='container text-center ' id='allpost-container'>
                 <h3>Escribir una Historia</h3>
                     <CreatePost postTitle={postTitle}
                                 postContent={postContent}
@@ -47,26 +47,25 @@ export default function AllPost() {
             </div>
         )
     } else {
-   
-    return(
-        <div className='container text-center '>
-            <h3>Ver todas las Historias</h3>
-            <div className='row' >            
-                {allPost.map(post => (
-                    <div className="col-sm-4"><Post
-                        key={post.id}
-                        id={post.id}
-                        title={post.title}
-                        content={post.content}
-                        /></div>
-                ))}
+        return(
+            <div className='container text-center ' id='allpost-container'>
+                <h3>Historias</h3>
+                <div className='row' >            
+                    {allPost.map(post => (
+                        <div className="col-sm-4"><Post
+                            key={post.id}
+                            id={post.id}
+                            title={post.title}
+                            content={post.content}
+                            /></div>
+                    ))}
+                </div>
+                <br/>
+                <div >
+                    <button className='btn btn-outline-primary' id='allpost-button' onClick={onCreate}>Agregar una historia</button>
+                    <button className='btn btn-outline-primary' id='allpost-button' onClick={onShow}>Ver todas las historias</button>
+                </div>
             </div>
-            <br/>
-            <div >
-                <button className='btn btn-outline-primary' onClick={onCreate}>Agregar una historia</button>
-                <button className='btn btn-outline-primary' onClick={onShow}>Ver todas las historias</button>
-            </div>
-        </div>
-    )
+        )
     }
 }

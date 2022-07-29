@@ -1,19 +1,16 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import "../styles/Home.css"
 
 export default function Home() {
     return(
-        <div className='container text-center '>
-            <div>
-                <h3>Bienvenidos a mi Blog</h3>
+        <div id="intro" class="bg-image shadow-2-strong">
+            <div className='container d-flex align-items-center justify-content-center text-center h-100  '>
+                <div>
+                    <h3>Bienvenidos a mi Blog</h3>
+                    <button type="button" className='btn btn-outline-secondary' id="login-button" ><Link className='nav-link active' to="/Login">Historias</Link></button>
+                </div>
             </div>
-            <div className='text-center'>
-                <img    className='rounded'
-                        src="https://img.freepik.com/foto-gratis/arreglo-libros-antiguos-espacio-copia_23-2148898331.jpg?w=826&t=st=1659010588~exp=1659011188~hmac=763ebda2a762e3c1e74d6ec79a0eb264f4ff9c4c1980ef0db85a30a99c7c3f92"
-                        alt="bienvenido"
-                        width="500px"/>
-            </div>
-
         </div>
     )
 }

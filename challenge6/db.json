@@ -2,32 +2,32 @@
   "posts": [
     {
       "id": 1,
-      "title": "Mi primera Historia",
-      "content": "Esta es la primera historia..."
+      "title": "El Lazarillo de Tormes",
+      "content": "Por primera vez un personaje, Lázaro de Tormes, cuenta en primera persona su vida desde su infancia hasta su matrimonio haciendo un retrato satírico de la España y la picaresca de la época."
     },
     {
-      "title": "Mi segunda Histora",
-      "content": "Había una vez...",
+      "title": "La metamorfosis",
+      "content": "Narra la historia de Gregor Samsa, un viajante comercial quien una mañana tras un sueño intranquilo se transforma en un monstruoso insecto, provocando a partir de ese momento un enorme drama en su familia.",
       "id": 2
     },
     {
-      "title": "Mi tercer historia",
-      "content": "En el reino del revez....",
+      "title": "El principito",
+      "content": "En esta novela corta, Saint-Exupéry habla sobre la idiotez humana y la sabiduría que los niños dejan ir cuando crecen, a través de la historia de un aviador perdido en el desierto tras haber tenido un desperfecto técnico en su avión. Ahí será donde conozca a un pequeño príncipe venido de otro planeta.",
       "id": 3
     },
     {
-      "title": "dsad",
-      "content": "dsaasdas",
+      "title": "Orgullo y prejuicio",
+      "content": "Jane, Elizabeth, Mary, Kitty y Lidia son cinco hermanas que viven con sus padres a las afueras de Londres y que deben contraer matrimonio para que la herencia paterna continúe en el seno familiar. A esa tarea se encomienda con ahínco su madre, quien se siente esperanzada cuando entran en escena Mr. Bingley y Mr. Darcy.",
       "id": 4
     },
     {
-      "title": "asdsa",
-      "content": "dsadsaasd",
+      "title": "Romeo y Julieta",
+      "content": "La icónica tragedia de Shakespeare comienza con dos familias de Verona, los Montesco y los Capuleto, enemistadas desde tiempos inmemorables. El odio es tan fuerte que incluso se lleva la vida de víctimas inocentes.",
       "id": 5
     },
     {
-      "title": "sadsads",
-      "content": "dads",
+      "title": "Los Miserables",
+      "content": "La historia narra la vida y peripecias de Jean Valjean a través de varios acontecimientos que reflejan la denuncia de la miseria y la pobreza de la época, así como su reflexión sobre las grandes cuestiones morales como la justicia, el bien, el mal o la solidaridad, entre otras.",
       "id": 6
     }
   ],
@@ -40,27 +40,27 @@
     },
     {
       "name": "Lisa Simpson",
-      "email": "lsimpson@gmail.com",
+      "email": "lsimpson@email.com",
       "password": "123",
       "id": 2
     },
     {
       "name": "Bart Simpson",
-      "email": "bsimpson@gmail.com",
+      "email": "bsimpson@email.com",
       "password": "123",
       "id": 3
     },
     {
-      "name": "Agustin",
-      "email": "agubosio@gmail.com",
-      "password": "123",
-      "id": 4
-    },
-    {
       "name": "Marge",
-      "email": "margeb@gmail.com",
+      "email": "margeb@email.com",
       "password": "2321",
       "id": 5
+    },
+    {
+      "name": "Abraham Simpson",
+      "email": "asimpson@email.com",
+      "password": "345",
+      "id": 6
     }
   ]
 }

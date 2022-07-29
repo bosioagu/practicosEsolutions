@@ -1,0 +1,13 @@
+#login-button,
+#login-button-register {
+    margin: 0 10px;
+    width: 120px;
+}
+
+#login-container{
+    margin-top: 150px;
+}
+
+#login-alert{
+    margin-top: 20px;
+}

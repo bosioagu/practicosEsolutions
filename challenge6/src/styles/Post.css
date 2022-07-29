@@ -1,0 +1,9 @@
+#post-card{
+    margin-top: 15px;
+    height: 260px;
+}
+
+#post-card:hover{
+    color:white;
+    background: #212529;
+}
