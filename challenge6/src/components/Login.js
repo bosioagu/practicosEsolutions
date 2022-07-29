@@ -31,19 +31,24 @@ export default function Login() {
     }
     
     return(
-        <div className='login-wrapper'>
-            <h1>Bienvenidos de nuevo. Por favor inicie sesión</h1>
+        <div className='container text-center '>
+            <h3>Bienvenidos de nuevo. Por favor inicie sesión</h3>
             <form onSubmit={handleSubmit}>
-                <fieldset>
-                    <label htmlFor='email'>
-                        <input type='email' placeholder='Escriba su dirección electrónico' name="email" onChange={getEmail}/>
+                <div className='mb-3'>
+                    <label htmlFor='email' className='form-label col-md-4'>
+                        <input type='email' className='form-control' placeholder='Escriba su dirección electrónico' name="email" onChange={getEmail}/>
                     </label>
-                    <label htmlFor='password'>
-                        <input type='password' placeholder='Escriba su contraseña' name="password"/>
+                    </div>
+                <div className='mb-3'>
+                    <label htmlFor='password' className='form-label col-md-4'>
+                        <input type='password' className='form-control ' placeholder='Escriba su contraseña' name="password"/>
                     </label>
-                </fieldset>
-                <button>Ingresar</button>
-                <button type="button" onClick={handleClick}>Registrarse</button>
+                </div>
+                <div className='container text-center'>
+                    <button className='btn btn-outline-primary'>Ingresar</button>
+                    
+                    <button type="button" className='btn btn-outline-primary ' onClick={handleClick}>Registrarse</button>
+                </div>
             </form>
         </div>
     )

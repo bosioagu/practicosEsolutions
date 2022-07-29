@@ -39,21 +39,27 @@ export default function Register() {
     }
 
     return(
-        <div className='wrapper-register'>
-            <h2>Bienvenidos. Por favor registrese aquí.</h2>
+        <div className='container text-center'>
+            <h3>Bienvenidos. Por favor registrese aquí.</h3>
             <form className='register-form' onSubmit={handleSubmit}> 
-                <fieldset>
-                    <label htmlFor='name'>
-                        <input type="text" placeholder='Escriba su nombre' className='register-input' name='name' onChange={postName}/>
-                    </label> <br/>
-                    <label htmlFor='email'>
-                        <input type="email" placeholder='Escriba su dirección de correo' className='register-input'name='email'onChange={postEmail}/>
-                    </label> <br/>
-                    <label htmlFor='password'>
-                        <input type="password" placeholder='Escriba su contraseña' className='register-input' name='password' onChange={postPassword}/>
+                <div className='mb-3'>
+                    <label htmlFor='name' className='form-label col-md-4'>
+                        <input type="text" className='form-control' placeholder='Escriba su nombre'  name='name' onChange={postName}/>
+                    </label> 
+                </div>
+                <div className='mb-3'>
+                    <label htmlFor='email' className='form-label col-md-4'>
+                        <input type="email" className='form-control' placeholder='Escriba su dirección de correo' name='email'onChange={postEmail}/>
                     </label>
-                </fieldset>
-                <button type="submit"  className='register-button' > Enviar</button>
+                </div>
+                <div className='mb-3'>
+                    <label htmlFor='password' className='form-label col-md-4'>
+                        <input type="password" className='form-control' placeholder='Escriba su contraseña'  name='password' onChange={postPassword}/>
+                    </label>
+                </div>
+                <div className='container text-center'>
+                    <button type="submit"  className='btn btn-outline-primary' > Enviar</button>
+                </div>
             </form>
         </div>
     )

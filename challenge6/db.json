@@ -9,6 +9,26 @@
       "title": "Mi segunda Histora",
       "content": "Había una vez...",
       "id": 2
+    },
+    {
+      "title": "Mi tercer historia",
+      "content": "En el reino del revez....",
+      "id": 3
+    },
+    {
+      "title": "dsad",
+      "content": "dsaasdas",
+      "id": 4
+    },
+    {
+      "title": "asdsa",
+      "content": "dsadsaasd",
+      "id": 5
+    },
+    {
+      "title": "sadsads",
+      "content": "dads",
+      "id": 6
     }
   ],
   "users": [
@@ -29,6 +49,18 @@
       "email": "bsimpson@gmail.com",
       "password": "123",
       "id": 3
+    },
+    {
+      "name": "Agustin",
+      "email": "agubosio@gmail.com",
+      "password": "123",
+      "id": 4
+    },
+    {
+      "name": "Marge",
+      "email": "margeb@gmail.com",
+      "password": "2321",
+      "id": 5
     }
   ]
 }

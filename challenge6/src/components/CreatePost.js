@@ -2,33 +2,33 @@ import React from 'react'
 
 export default function CreatePost( { postTitle, postContent, savePost}) {
     return(
-        <div>
-            <h2>Crear Post</h2>
+        <div className='container text-center '>
+            <h3>Crear Post</h3>
             <form onSubmit={savePost}>
-                <fieldset>
-                    <label>
+                <div className='mb-3'>
+                    <label className='form-label col-md-4'>
                         <input  type='text' 
                                 placeholder='Ingresar un título' 
                                 required
                                 onChange={postTitle}
                                 name='title'
+                                className='form-control'
                         />
-                        <br/>
-                        <br/>
+                        
                     </label>
-                    <label>
+                </div>
+                <div className='mb-3'>
+                    <label className='form-label col-md-4'>
                         <textarea   type='text'
                                     placeholder='Escriba una historia'
                                     required
                                     onChange={postContent}
                                     name='content'
+                                    className='form-control'
                         />
-                        <br/>
-                        <br/>
-                        <button type='submit'>Guardar</button>
-
                     </label>
-                </fieldset>
+                </div>
+                <button className='btn btn-outline-primary ' type='submit'>Guardar</button>
             </form>
         </div>
     )

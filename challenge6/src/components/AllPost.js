@@ -35,11 +35,11 @@ export default function AllPost() {
     const onShow = () => {
         getPosts().then((data) => setAllPost(data))
     }
-    
+
     if(isCreated) {
         return(
-            <div>
-                <h2>Escribir una Historia</h2>
+            <div className='container text-center '>
+                <h3>Escribir una Historia</h3>
                     <CreatePost postTitle={postTitle}
                                 postContent={postContent}
                                 savePost={savePost}
@@ -49,18 +49,23 @@ export default function AllPost() {
     } else {
    
     return(
-        <div>
-            <h2>Ver todas las Historias</h2>
-            {allPost.map(post => (
-                <Post
-                    key={post.id}
-                    id={post.id}
-                    title={post.title}
-                    content={post.content}
-                    />
-            ))}
-            <button onClick={onCreate}>Agregar una historia</button>
-            <button onClick={onShow}>Ver todas las historias</button>
+        <div className='container text-center '>
+            <h3>Ver todas las Historias</h3>
+            <div className='row' >            
+                {allPost.map(post => (
+                    <div className="col-sm-4"><Post
+                        key={post.id}
+                        id={post.id}
+                        title={post.title}
+                        content={post.content}
+                        /></div>
+                ))}
+            </div>
+            <br/>
+            <div >
+                <button className='btn btn-outline-primary' onClick={onCreate}>Agregar una historia</button>
+                <button className='btn btn-outline-primary' onClick={onShow}>Ver todas las historias</button>
+            </div>
         </div>
     )
     }
